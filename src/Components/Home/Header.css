@@ -1,0 +1,67 @@
+.headerbar{
+    height:10vh;
+    position:static;
+    top:0;
+}
+
+.headerItem{
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 24px;
+}
+
+.normalHeader{
+    color:#4CAF50;
+}
+
+.normalHeader:hover{
+    color:red;
+}
+
+.activeHeader{
+    color:black;
+    font-weight: 900;
+}
+
+
+.normalHeader:hover > .selectedHeaderOptions1{
+    visibility: visible;
+    
+}
+.activeHeader:hover  > .selectedHeaderOptions1{
+    visibility: visible;
+}
+.selectedHeaderOptions1{
+    position: absolute;
+    z-index: 20000;
+    padding:15px;
+    visibility: hidden;
+    background-color: #1976D2;
+    line-height: 2;
+    font-size: 18px;
+    font-weight: 300;
+    top:7vh;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left: -10px;
+    text-align: left;
+}
+  
+
+
+.subHeader{
+    color: black;
+}
+.subHeader:hover{
+    color: white;
+}
+
+.subHeaderLink{
+    text-decoration: none;
+    color: black;
+}
+
+.subHeaderLink:hover{
+    text-decoration: none;
+    color: white;
+}

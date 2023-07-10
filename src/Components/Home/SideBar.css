@@ -1,0 +1,12 @@
+.SideBar{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    min-height:85vh;
+    position:static;
+    left: 0;
+    background: #1976D2;
+    width: auto;
+    color: #fff;
+    padding:20px;
+}

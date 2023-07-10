@@ -1,0 +1,49 @@
+[
+    {"item":"Section 1","path":"Section1","children": [
+            {"item":"Section 1 Sub Menu 1","path":"Submenu1"
+            },
+            {"item":"Section 1 Sub Menu 2","path":"Submenu2"
+            },
+            {"item":"Section 1 Sub Menu 3","path":"Submenu3"
+            }
+        ]
+    },
+    {"item":"Section 2","path":"Section2","children": [
+            {"item":"Section 2 Sub Menu 1","path":"Submenu1"
+            },
+            {"item":"Section 2 Sub Menu 2","path":"Submenu2"
+            },
+            {"item":"Section 2 Sub Menu 3","path":"Submenu3"
+            }
+        ]
+    },
+    {"item":"Section 3","path":"Section3","children": [
+            {"item":"Section 3 Sub Menu 1","path":"Submenu1"
+            },
+            {"item":"Section 3 Sub Menu 2","path":"Submenu2"
+            },
+            {"item":"Section 3 Sub Menu 3","path":"Submenu3"
+            }
+        ]
+    },
+    {"item":"Section 4","path":"Section4","children": [
+            {"item":"Section 4 Sub Menu 1","path":"Submenu1"
+            },
+            {"item":"Section 4 Sub Menu 2","path":"Submenu1"
+            },
+            {"item":"Section 4 Sub Menu 3","path":"Submenu1"
+            }
+        ]
+    },
+    {"item":"Section 5","path":"Section5","children": [
+            {"item":"Section 5 Sub Menu 1","path":"Submenu1"
+            },
+            {"item":"Section 5 Sub Menu 2","path":"Submenu1"
+            },
+            {"item":"Section 5 Sub Menu 3","path":"Submenu1"
+            }
+        ]
+    },
+    {"item":"Forms","path":"Forms"
+    }
+]

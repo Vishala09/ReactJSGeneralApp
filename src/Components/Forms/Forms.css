@@ -1,0 +1,10 @@
+.formColumn{
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.formLabel{
+    font-style: italic;
+    font-size: 12px;
+    color:blue;
+}
