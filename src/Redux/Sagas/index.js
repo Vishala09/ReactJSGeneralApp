@@ -1,11 +1,12 @@
 import {all,fork} from 'redux-saga/effects'
 
-import getDataFromAPISaga from './GetProductsApiSaga.js'
+import getProductsFromAPISaga from './GetProductsApiSaga.js'
+import getQuotesFromAPISaga from './GetQuotesApiSaga.js' 
 
 export default function* rootSaga(){
     yield all(
         [
-           fork(getDataFromAPISaga)
+           fork(getProductsFromAPISaga) , fork(getQuotesFromAPISaga)
         ]
     )
 }

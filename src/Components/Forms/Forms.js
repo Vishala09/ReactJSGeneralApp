@@ -12,8 +12,22 @@ function Forms() {
   const [errors, setErrors] = useState({});
   const dispatch = useDispatch();
   const ProductsFromApi = useSelector(state => state.ProductsReducer);
+  const QuotesFromApi = useSelector(state => state.QuotesReducer);
 
   const saveAnswers = (value,category,type,checked) => {
+    if(category=='Desired Product')
+    {
+      if(value=='undefined')
+      {
+        FormQuestions[0].items[3].disabled = true;
+      }
+      else
+      {
+        FormQuestions[0].items[3].disabled = false;
+      }
+      if(FormQuestions[0].items[3].options.length==0)
+      dispatch({type:'GET_QUOTES_REQUESTED'});
+    }
     if(type=='checkbox')
     {
       if (checked) {
@@ -44,15 +58,28 @@ function Forms() {
   }
 
   useEffect(() => {
+    //INITIAL
     dispatch({type:'GET_PRODUCTS_REQUESTED'});
     reset();
   }, [])
 
   useEffect(() => {
-    FormQuestions[0].items[2].options=ProductsFromApi.data;
-    setFormQuestions([...FormQuestions]);
+    if(ProductsFromApi?.loading == false)
+    {
+      FormQuestions[0].items[2].options=ProductsFromApi.data;
+      setFormQuestions([...FormQuestions]);
+    }
   }, [ProductsFromApi])
   
+  useEffect(() => {
+    if(QuotesFromApi?.loading == false)
+    {
+      FormQuestions[0].items[3].options=QuotesFromApi.data;
+      FormQuestions[0].items[3].disabled = false;
+      console.log(FormQuestions[0].items[3])
+      setFormQuestions([...FormQuestions]);
+    }
+  }, [QuotesFromApi])
   
 
   const submit = () => {
@@ -80,7 +107,7 @@ function Forms() {
                 {
                     FormQuestions.map((formSection,sectionIndex)=>
                     (
-                        <div key={`FormSection_${formSection.section}`} className='col-4 formColumn'>
+                        <div key={`FormSection_${formSection.section}`} className='col-4 '>
                         {
                             formSection.items?.map((item, index) => {
                                 return (

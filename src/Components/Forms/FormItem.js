@@ -132,13 +132,13 @@ export const FormItem =  React.memo( ({ item, onChange, answer})  => {
         return (
           <>
             <Form.Label className='formLabel'>{item.label}</Form.Label>
-            <Form.Select  aria-label={item.label} value={answer} 
+            <Form.Select disabled={item.disabled}  aria-label={item.label} value={answer} 
             onChange={(e) => handleChange(e.target.value, item.key)}>
               <option value={'undefined'} style={{backgroundColor:'grey'}}> {item.label}</option>
               {
                 item.options.map((opt, index) => {
                   return (
-                    <option  value={opt.id}>{opt.title}</option>
+                    <option  value={opt.id}>{opt[item.fieldName]}</option>
                   )
                 })
               }

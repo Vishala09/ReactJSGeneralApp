@@ -6,18 +6,15 @@ import rootSaga from '../Sagas';
 
 import ProductsReducer from './ProductsReducer';
 import LoginReducer from './LoginReducer';
+import QuotesReducer from './QuotesReducer'
 
 const reducer = combineReducers({
-  ProductsReducer,LoginReducer
-  
+  ProductsReducer,LoginReducer,QuotesReducer
 })
-
-
 
 const sagaMiddleware= createSagaMiddleware();
 const store = configureStore({
   reducer,middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(sagaMiddleware),
-
 })
 
 sagaMiddleware.run(rootSaga);

@@ -17,6 +17,17 @@ let Questions = [
             label: 'Select the desired product',
             type: 'select',
             key: 'Desired Product',
+            fieldName: 'title',
+            disabled: false,
+            options: []
+        },
+        {
+            label: 'Select the desired Quote',
+            type: 'select',
+            key: 'Quote',
+            nestedby: 'Desired Product',
+            fieldName: 'quote',
+            disabled: true,
             options: []
         },
         {
